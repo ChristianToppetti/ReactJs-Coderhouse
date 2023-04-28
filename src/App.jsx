@@ -2,6 +2,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import Button from './components/Items/Button'
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + Coder</h1>
+      <Button bgc="blue">Clickeame</Button>
     </>
   )
 }
