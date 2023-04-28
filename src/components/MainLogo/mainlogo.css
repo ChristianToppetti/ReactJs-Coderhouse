@@ -1,0 +1,11 @@
+.mainlogo {
+    display: inline-block;
+    margin: 1rem 0 0 3rem;
+}
+
+.mainlogo__text {
+    font-size: 4rem;
+    font-family: "Comforter";
+    margin: 0;
+    color: #383737;
+}

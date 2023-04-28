@@ -1,22 +1,21 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-import Button from './components/Items/Button'
+import MainLogo from './components/MainLogo/MainLogo'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
+  let navElements = ["INICIO", "PRODUCTOS", "CONTACTO", "POLITICA DE DEVOLUCION"]
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + Coder</h1>
-      <Button bgc="blue">Clickeame</Button>
+      <header>
+        <MainLogo>INDRA</MainLogo>
+        <NavBar elements={navElements} cartcount={33}/>
+      </header>
+      
+      <main>
+        <ItemListContainer greeting={"Pre-entrega: Christian Toppetti"}/>
+      </main>
     </>
   )
 }
