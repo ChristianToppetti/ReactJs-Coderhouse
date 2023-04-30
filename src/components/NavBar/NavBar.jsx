@@ -6,6 +6,7 @@ export default function NavBar(props) {
 
     props.elements.forEach((element, i) => {
         navElements.push(
+            // Warning: Each child in a list should have a unique "key" prop
             <li key={i}>
                 <a href="#">{element}</a>
             </li>
