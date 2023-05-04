@@ -1,0 +1,25 @@
+.item {
+    display: flex; flex-direction: column;
+    background-color:#01613e;
+    overflow: hidden;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+    min-width: calc((100% / 5) - (4rem / 5)); /*maximo 5 items por fila */
+    max-width: calc((100% / 4) - (3rem / 4)); /*minimo 4 items por fila */
+    max-height: 39rem;
+}
+
+.item__nametag {
+    font-size: 1.7rem;
+    padding: .5rem;
+}
+
+
+.item__img {width: 100%;}
+
+.item__pricetag {
+    padding: .5rem;
+    font-size: 1.5rem;
+}

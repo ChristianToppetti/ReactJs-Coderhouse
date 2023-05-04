@@ -1,0 +1,11 @@
+.flexclass {display: flex;}
+
+.fcol {flex-direction: column;}
+
+.frow {flex-direction: row;}
+
+.fwrap {flex-wrap: wrap;}
+
+.fnowrap {flex-wrap: nowrap;}
+
+.fgap {gap: 0.8rem}
