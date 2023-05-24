@@ -11,15 +11,12 @@
     max-height: 39rem;
 }
 
-.item__nametag {
+.item_nametag {
     font-size: 1.7rem;
     padding: .5rem;
+    flex-basis: 40%;
 }
 
+.item_img {width: 100%;}
 
-.item__img {width: 100%;}
-
-.item__pricetag {
-    padding: .5rem;
-    font-size: 1.5rem;
-}
+.item_button {margin: .5rem; height: 2rem;}

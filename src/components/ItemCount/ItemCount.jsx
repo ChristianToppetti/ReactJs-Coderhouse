@@ -1,9 +1,11 @@
+import Flex from "../Flex/Flex";
 import { useState } from "react";
+import "./itemcount.css"
 
-export default function ItemCount() {
+export default function ItemCount({limit}) {
     const [count, setCount] = useState(1);
 
-    const validCount = (value) => (value < 1 || value > 5) 
+    const validCount = (value) => (value < 1 || value > limit) 
 
     const handleCount = ({target: btn}) => {
         let newValue = count
@@ -12,10 +14,10 @@ export default function ItemCount() {
     }
 
     return (
-        <div>
-            <button disabled={validCount(count-1)} onClick={handleCount}>-</button>
-            <span>{count}</span>
-            <button disabled={validCount(count+1)} onClick={handleCount} id="btnAdd">+</button>
-        </div>
+        <Flex customclass={"countwrapper"}>
+            <button disabled={validCount(count-1)} onClick={handleCount} className="item_count">-</button>
+            <div>{count}</div>
+            <button disabled={validCount(count+1)} onClick={handleCount} className="item_count" id="btnAdd">+</button>
+        </Flex>
     )
 }

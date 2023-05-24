@@ -1,0 +1,25 @@
+.cart_btn {
+    margin: .5rem 1rem .5rem .5rem;
+}
+
+.itemdetail {
+    display: flex; flex-direction: column;
+    background-color:#01613e;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    max-width: 20%;
+    padding-bottom: .5rem;
+}
+
+.itemdetail_closebtn { height: 3rem;}
+
+.itemdetail_nametag {
+    font-size: 1.7rem;
+    padding: .5rem;
+    flex-basis: 40%;
+}
+
+.itemdetail_img {width: 100%;}
+
+.itemdetail_pricetag {font-size: 1.5rem;}

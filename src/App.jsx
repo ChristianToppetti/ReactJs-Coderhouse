@@ -1,22 +1,27 @@
-import './App.css'
-import MainLogo from './components/MainLogo/MainLogo'
-import NavBar from './components/NavBar/NavBar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header/Header.jsx'
+import Home from './components/Home/Home'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import './App.css'
 
-function App() {
-  let navElements = ["INICIO", "PRODUCTOS", "CONTACTO", "POLITICA DE DEVOLUCION"]
-  
+
+function App() { 
   return (
-    <>
-      <header>
-        <MainLogo>INDRA</MainLogo>
-        <NavBar elements={navElements} cartcount={33}/>
-      </header>
-      
-      <main>
-        <ItemListContainer greeting={"Pre-entrega: Christian Toppetti"}/>
-      </main>
-    </>
+    <BrowserRouter>
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<ItemListContainer greeting={"Productos"}/>} />
+        <Route path='/products/vestidos' element={<ItemListContainer greeting={"Vestidos"} type={"vestido"} />} />
+        <Route path='/products/remeras' element={<ItemListContainer greeting={"Remeras"} type={"remera"}/>} />
+        <Route path='/products/calzado' element={<ItemListContainer greeting={"Calzado"} type={"calzado"}/>} />
+
+        <Route path='/products/:itemId' element={<ItemDetailContainer/>} />
+        <Route path='*' element={<h2 style={{color: "black"}}>Error 404: Page not found</h2>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

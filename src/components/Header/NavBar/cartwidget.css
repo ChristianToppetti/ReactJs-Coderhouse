@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-.cartwidget__count {
+.cartwidget_count {
     background-color: rgb(221, 59, 59);
     font-size: .8rem;
     font-weight: bold;

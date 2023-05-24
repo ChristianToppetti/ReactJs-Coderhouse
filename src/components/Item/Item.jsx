@@ -1,21 +1,25 @@
-import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
+import Button from '../Button/Button'
 import './item.css'
 
-export default function Item({imgfolder, price}) {
-    const itemImgPath = `./src/assets/${imgfolder}/img0.webp`
+export default function Item(props) {
+    const {name, imgsource, id} = props
 
     return (
-        <div className='item'>
-            <h3 className="item__nametag">NAME</h3>
+        <>
+            <div className='item'>
+                <h3 className="item_nametag">{name}</h3>
 
-            <div>
-                <img className="item__img" src={itemImgPath} alt="item" />
+                <div>
+                    <img className="item_img" src={imgsource} alt="item" />
+                </div>
+                
+                <div>
+                    <Link to={`/products/${id}`}>
+                        <Button customclass={"item_button"}>Ver detalles.</Button> 
+                    </Link>
+                </div>
             </div>
-
-            <div className="item__pricetag">
-                {`${price}$`}
-            </div>
-            <ItemCount />
-        </div>
+        </>
     )
 }

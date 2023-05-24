@@ -1,9 +1,1 @@
-.itemcard {
-    display: inline-block;
-    background-color: #f0f0f0;
-    color: #000;
-    border: solid 1px;
-    border-radius: .5rem;
-    padding: 1rem;
-    width: 60vw;
-}
+.itemwrapper {gap: 0.8rem}

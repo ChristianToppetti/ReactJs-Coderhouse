@@ -8,4 +8,6 @@
 
 .fnowrap {flex-wrap: nowrap;}
 
-.fgap {gap: 0.8rem}
+.fjustify_spacebtwn {justify-content: space-between;}
+
+.fjustify_center {justify-content: center;}

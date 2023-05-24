@@ -4,7 +4,7 @@ export default function CartWidget(props) {
     return (
         <div className="cartwidget">
             🛒 
-            <span className="cartwidget__count">
+            <span className="cartwidget_count">
                 {props.count}
             </span>
         </div>
