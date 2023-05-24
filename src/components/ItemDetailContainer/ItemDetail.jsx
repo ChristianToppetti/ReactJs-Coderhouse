@@ -2,6 +2,7 @@ import Flex from '../Flex/Flex'
 import ItemCount from '../ItemCount/ItemCount'
 import Button from '../Button/Button'
 import '../ItemDetailContainer/itemdetail.css'
+import { Link } from 'react-router-dom'
 
 export default function ItemDetail({name, price, imgsource, stock, desc}) {
   return (

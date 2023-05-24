@@ -10,9 +10,10 @@
     color: white;
     max-width: 20%;
     padding-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
-.itemdetail_closebtn { height: 3rem;}
+.itemdetail_closebtn { height: 3rem; width: 100%;}
 
 .itemdetail_nametag {
     font-size: 1.7rem;
