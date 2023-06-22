@@ -4,7 +4,7 @@ import {getProductsArr, getCategory} from "../../services/firebase"
 import Flex from "../Flex/Flex"
 import ItemList from "./ItemList"
 import Loader from '../Loader/Loader'
-import "./itemlistcontainer.css"
+import "./ItemListContainer.css"
 
 export default function ItemListContainer() {
     const [productsList, setProductList] = useState(null)
