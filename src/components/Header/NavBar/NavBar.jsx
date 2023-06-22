@@ -1,28 +1,28 @@
 import "./navbar.css"
 import CartWidget from "./CartWidget"
-import { Link } from "react-router-dom"
+import { NavLink} from "react-router-dom"
 
-export default function NavBar(props) {
+export default function NavBar() {
     return (
         <nav className="shadow">
             <ul>
                 <li>
-                    <Link to={'/'}>INICIO</Link>
+                    <NavLink to={'/'} >INICIO</NavLink>
                 </li>
                 <li>
-                    <Link to={'/products'}>PRODUCTOS</Link>
+                    <NavLink to={'/products'}>PRODUCTOS</NavLink>
                 </li>
                 <li>
-                    <Link to={'/products/vestidos'}>VESTIDOS</Link>
+                    <NavLink to={'/category/vestidos'}>VESTIDOS</NavLink>
                 </li>
                 <li>
-                    <Link to={'/products/remeras'}>REMERAS</Link>
+                    <NavLink to={'/category/remeras'}>REMERAS</NavLink>
                 </li>
                 <li>
-                    <Link to={'/products/calzado'}>CALZADO</Link>
+                    <NavLink to={'/category/calzado'}>CALZADO</NavLink>
                 </li>
             </ul>
-            { <CartWidget count={props.cartcount} /> }
+            { <CartWidget /> }
         </nav>
     )
 }

@@ -1,6 +1,9 @@
-.cart_btn {
-    margin: .5rem 1rem .5rem .5rem;
+.detailwrapper {
+    padding: .3rem 1rem;
+    color: white;
 }
+
+.disabled {color:grey}
 
 .itemdetail {
     display: flex; flex-direction: column;
@@ -8,12 +11,12 @@
     overflow: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    max-width: 20%;
-    padding-bottom: .5rem;
+    max-width: 24rem;
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
-.itemdetail_closebtn { height: 3rem; width: 100%;}
+.itemdetail_closebtn {height: 3rem; width: 100%; padding: .5rem;}
 
 .itemdetail_nametag {
     font-size: 1.7rem;
@@ -24,3 +27,19 @@
 .itemdetail_img {width: 100%;}
 
 .itemdetail_pricetag {font-size: 1.5rem;}
+
+a.linktocart {
+    color: #ffb1b1;;
+    text-decoration: underline;
+}
+a.lintocart:link {
+    color: black
+}
+
+a.lintocart:visited {
+    color: black
+}
+
+a.lintocart:hover {
+    color: #ffffff;
+}

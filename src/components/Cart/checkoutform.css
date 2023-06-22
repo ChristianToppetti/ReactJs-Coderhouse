@@ -1,0 +1,24 @@
+.cart_form {
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .3rem;
+    padding-bottom: 1rem;
+    border: .2rem solid #1a1a1a;
+    border-top: 0;
+}
+
+.cart_form input {
+    width: 80%;
+    height: 2rem;
+}
+
+.order {
+    width: 81% !important;
+    background-color: #01613e;
+}
+
+.order:disabled {
+    background-color: #2f6350;
+}

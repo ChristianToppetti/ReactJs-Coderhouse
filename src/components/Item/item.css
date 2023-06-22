@@ -12,9 +12,10 @@
 }
 
 .item_nametag {
-    font-size: 1.7rem;
-    padding: .5rem;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 1.2rem;
     flex-basis: 40%;
+    padding: .3rem .2rem;
 }
 
 .item_img {width: 100%;}

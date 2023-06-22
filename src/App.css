@@ -13,20 +13,17 @@ header {
     background-color: #e4e4e4;
 }
 
-main {
-    color: #383737;
-}
-
 .shadow {
     box-shadow: 0 3px 1px 0px #1a1a1a;
 }
 
-.itemcard {
+.card {
     display: inline-block;
     background-color: #f0f0f0;
     color: #000;
     border: solid 1px;
-    border-radius: .5rem;
     padding: 1rem;
     width: 60vw;
+    height: 78vh;
+    overflow-y: scroll;
 }

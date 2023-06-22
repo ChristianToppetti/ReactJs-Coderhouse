@@ -1,31 +1,36 @@
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import {useState, useEffect} from "react"
+import {useParams} from "react-router-dom"
+import {getProduct} from "../../services/firebase"
 import ItemDetail from "./ItemDetail"
 import Flex from "../Flex/Flex"
+import Loader from "../Loader/Loader"
+import Modal from "../Modal/Modal"
 
 export default function ItemDetailContainer() {
     const {itemId} = useParams()
-    const [productsList, setProductList] = useState([])
+    const [product, setProduct] = useState(null)
+    
+    const errorStyle = {
+        color: "black",
+        backgroundColor: "white",
+        borderRadius: "5px",
+        padding: ".5rem"
+    }
 
     useEffect(() => {
-        async function getProducts() {
-            const response = await fetch("../src/assets/products_data.json")
-            const products = await response.json()
+        getProduct(itemId).then(prod => setProduct(prod))
+    }, [itemId])
 
-            //Mock delay:
-            setTimeout(() => {
-                setProductList(products)
-            }, 500)
-        }
-
-        getProducts()
-    }, [])
-
-    let product = productsList.find(product => product.id === itemId)
+    if(!product) {
+        return <Loader />
+    }
 
     return (
         <Flex customclass={"fjustify_center"}>
-            <ItemDetail {...product} />
+            {product !== -1 ? 
+                <ItemDetail {...product} /> 
+            : 
+                <Modal><h3 style={errorStyle}>ERROR: Producto no encontrado</h3></Modal>}
         </Flex>
     )
 }

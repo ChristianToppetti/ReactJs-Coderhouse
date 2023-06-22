@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
         <MainLogo>INDRA</MainLogo>
-        <NavBar cartcount={33}/>
+        <NavBar/>
     </header>
   )
 }

@@ -1,32 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import "./itemlistcontainer.css"
+import React, {useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom'
+import {getProductsArr, getCategory} from "../../services/firebase"
 import Flex from "../Flex/Flex"
 import ItemList from "./ItemList"
+import Loader from '../Loader/Loader'
+import "./itemlistcontainer.css"
 
-export default function ItemListContainer({greeting, type}) {
-    const [productsList, setProductList] = useState([])
+export default function ItemListContainer() {
+    const [productsList, setProductList] = useState(null)
+    const {catId} = useParams()
+    const getFunc = catId ? getCategory : getProductsArr
 
     useEffect(() => {
-        async function getProducts() {
-            const response = await fetch("../src/assets/products_data.json")
-            let products = await response.json()
-            
-            type && products && (products = products.filter(product => product.type === type))
+        getFunc(catId).then(products => setProductList(products)) 
+    }, [catId])
 
-            //Mock delay:
-            setTimeout(() => {
-                setProductList(products)
-            }, 2000)
-        }
-
-        getProducts()
-    }, [type])
-
+    if(!productsList || productsList.lenght < 1) {
+        return <Loader />
+    }
+    console.log("itemlist cont ", productsList)
     return (
-        <div className="itemcard">
-            <h2>{greeting}</h2>
+        <div className="card">
             <Flex column={false} wrap={true} customclass={"itemwrapper"}>
-                <ItemList productslist={productsList} />
+                <ItemList products={productsList} />
             </Flex>
         </div>
     )

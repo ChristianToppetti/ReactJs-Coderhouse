@@ -1,0 +1,92 @@
+.cart_container {
+    position: fixed;
+    top: 0; right: 0;
+    justify-self: right;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+}
+
+.cart_emptytext {
+    text-align: center;
+    padding: .5rem;
+    color: #a0a0a0;
+}
+
+.cart_itemscont {
+    overflow-y: scroll;
+    text-align: left;
+    margin-left: .1rem;
+    margin-top: .2rem;
+}
+
+.cart_button {
+    padding: .7rem;
+    width: 100%;
+    justify-self: center;
+}
+
+.cart_item {
+    display: grid;
+    grid-template-areas: "itemimg itemname itemname itemname itemremove"
+                        "itemimg itemdetails itemdetails itemdetails itemremove";
+    grid-template-rows: auto auto;
+    grid-template-columns: 20% 1fr 1fr 1fr auto;
+    background-color: #01613e;
+    margin-bottom: 1rem;
+    margin-left: .2rem;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.cart_itemimg {
+    grid-area: itemimg;
+    margin: .5rem;
+}
+
+.cart_itemname {
+    grid-area: itemname;
+    white-space: break-spaces;
+    margin: .5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.cart_itemdetails {
+    grid-area: itemdetails;
+    display: flex; align-items: center;
+    font-weight: normal;
+    text-align: center;
+    gap: .7rem;
+    justify-content: space-evenly;
+    font-size: .7rem;
+    margin-bottom: .3rem;
+}
+.cart_itemdetails div {
+        display: flex; flex-direction: column;
+        gap:1rem;
+}
+.cart_itemdetails div strong {font-size: 1rem;}
+
+.cart_itemremove {
+    grid-area: itemremove;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: background-color 300ms;
+    cursor: pointer;
+    background-color: #01613e;
+    border-radius: 0;
+    border: none;
+}
+.cart_itemremove:hover{ background-color: #019760;}
+
+.cart_cartdetails {
+    display: flex; justify-content: space-between;
+    text-align: right;
+    margin-top: .1rem;
+    padding: 1rem 1rem;
+    background-color: #242424;
+}
