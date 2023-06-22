@@ -55,7 +55,7 @@ export default function Cart() {
             nav(`/confirmation/${orderId}`)
         }
         catch(error) {
-            alert(error)
+            nav(`/order-error/${error}`)
         }
     }
 

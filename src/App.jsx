@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation.jsx'
+import OrderError from './components/OrderError/OrderError.jsx'
 import Cart from './components/Cart/Cart.jsx'
 import './App.css'
 
@@ -34,6 +35,8 @@ function App() {
           <Route path='/products' element={<ItemListContainer />} />
           <Route path='/category/:catId' element={<ItemListContainer/>} />
           <Route path='/confirmation/:orderId' element={<OrderConfirmation/>} />
+          <Route path='/order-error/:errorId' element={<OrderError/>} />
+          
 
           {(!isItemDetailPath && !isCartPath) &&
             <Route path='*' element={<h2 style={{color: "black"}}>Error 404: Page not found</h2>} />

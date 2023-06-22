@@ -18,7 +18,7 @@ export default function ItemListContainer() {
     if(!productsList || productsList.lenght < 1) {
         return <Loader />
     }
-    console.log("itemlist cont ", productsList)
+
     return (
         <div className="card">
             <Flex column={false} wrap={true} customclass={"itemwrapper"}>

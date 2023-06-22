@@ -1,7 +1,7 @@
 import {useParams} from 'react-router-dom'
 
-export default function OrderConfirmation() {
-    const {orderId} = useParams()
+export default function OrderError() {
+    const {errorId} = useParams()
 
     const contStyle = {
         backgroundColor: "white",
@@ -14,8 +14,8 @@ export default function OrderConfirmation() {
 
     return (
         <div style={contStyle}>
-            <h2 style={{paddingBottom:"1rem"}}>Gracias por tu compra!</h2>
-            <p>Comprobante de compra: <strong style={{textDecoration:"underline"}}>{orderId}</strong></p>
+            <h2 style={{paddingBottom:"1rem"}}>Hubo un problema!</h2>
+            <p>Error: <strong style={{textDecoration:"underline"}}>{errorId}</strong></p>
         </div>
     )
 }
